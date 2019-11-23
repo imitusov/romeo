@@ -1,4 +1,5 @@
 *.ipynb_checkpoints
 *.txt
 *.zip
-website/
+*.idea
+sq_site/sq_site/__pycache__/
