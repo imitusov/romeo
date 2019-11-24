@@ -1,5 +1,0 @@
-*.ipynb_checkpoints
-*.txt
-*.zip
-*.idea
-sq_site/sq_site/__pycache__/
