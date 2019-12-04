@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['xn--b1acobgiubpgp5n.xn--p1ai', 'сквиртология.рф'
 # Application definition
 
 INSTALLED_APPS = [
+    'main.apps.MainConfig',
     'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
