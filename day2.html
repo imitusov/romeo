@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beijing Day 2 Schedule</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f5f5f3;
+      display: flex;
+      justify-content: center;
+      padding: 2rem 1rem;
+      margin: 0;
+      color: #1a1a19;
+    }
+    .wrapper { max-width: 820px; width: 100%; }
+    h1 { font-size: 22px; font-weight: 500; margin: 0 0 4px; color: #1a1a19; }
+    .subtitle { font-size: 13px; color: #5f5e5a; margin-bottom: 1.5rem; }
+    * { box-sizing: border-box; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    thead th {
+      font-size: 12px; font-weight: 500; color: #5f5e5a;
+      text-align: left; padding: 8px 14px;
+      border-bottom: 0.5px solid #b4b2a9;
+      background: #f1efe8;
+    }
+    tbody tr { border-bottom: 0.5px solid #d3d1c7; }
+    tbody tr:last-child { border-bottom: none; }
+    td { padding: 12px 14px; vertical-align: top; line-height: 1.5; color: #1a1a19; }
+    td:first-child { white-space: nowrap; font-size: 13px; color: #5f5e5a; width: 120px; }
+    td:nth-child(2) { width: 170px; }
+    .stop-name { font-weight: 500; font-size: 14px; color: #1a1a19; }
+    .badge {
+      display: inline-block; font-size: 11px; font-weight: 500;
+      padding: 2px 8px; border-radius: 6px; margin-top: 4px;
+    }
+    .badge-hist  { background: #EEEDFE; color: #3C3489; }
+    .badge-food  { background: #FAECE7; color: #993C1D; }
+    .badge-view  { background: #E1F5EE; color: #085041; }
+    .badge-mod   { background: #FAC775; color: #633806; }
+    .badge-night { background: #E6F1FB; color: #0C447C; }
+    .badge-cult  { background: #FBEAF0; color: #72243E; }
+    .why { font-size: 11px; color: #854F0B; background: #FAEEDA; border-radius: 5px; padding: 4px 8px; margin-top: 6px; line-height: 1.5; }
+    .options-wrap { display: flex; flex-direction: column; gap: 10px; margin-top: 2px; }
+    .option-block { border: 0.5px solid #d3d1c7; border-radius: 8px; padding: 10px 12px; background: #fafaf8; }
+    .option-label { font-size: 11px; font-weight: 500; color: #5f5e5a; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+    .option-title { font-size: 13px; font-weight: 500; color: #1a1a19; margin-bottom: 3px; }
+    .option-desc  { font-size: 12px; color: #444441; line-height: 1.5; }
+    .option-tip   { font-size: 11px; color: #5f5e5a; margin-top: 4px; font-style: italic; }
+    .note { font-size: 13px; color: #444441; }
+    .card {
+      background: #ffffff;
+      border: 0.5px solid #d3d1c7;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .card-header {
+      padding: 14px 16px;
+      background: #f1efe8;
+      border-bottom: 0.5px solid #b4b2a9;
+    }
+    .card-header-title { font-size: 16px; font-weight: 500; color: #1a1a19; }
+    .card-header-sub { font-size: 12px; color: #5f5e5a; margin-top: 2px; }
+    .legend {
+      display: flex; gap: 16px; flex-wrap: wrap;
+      margin-bottom: 1rem; font-size: 12px; color: #5f5e5a;
+      align-items: center;
+    }
+    .legend-item { display: flex; align-items: center; gap: 5px; }
+    .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Day 2 — Beijing</h1>
+    <p class="subtitle">Temple of Heaven · Summer Palace · 798 Art District · Evening: Sanlitun or Peking Opera</p>
+
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#7F77DD"></div> Historical</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#1D9E75"></div> Scenic</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#EF9F27"></div> Modern</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#D85A30"></div> Food</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#378ADD"></div> Nightlife</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#D4537E"></div> Culture</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-header-title">Full day itinerary</div>
+        <div class="card-header-sub">Imperial temples and gardens in the morning, contemporary art in the afternoon, two evening options</div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Stop</th>
+            <th>What to do</th>
+            <th>Tips</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>7:00 – 7:30 am</td>
+            <td>
+              <div class="stop-name">Breakfast</div>
+              <div><span class="badge badge-food">Food</span></div>
+            </td>
+            <td class="note">Start with a light breakfast near your hotel — congee, youtiao (fried dough sticks), or a jianbing crepe from a street cart.</td>
+            <td class="note">Keep it quick — the Temple of Heaven park is best enjoyed early before tour groups arrive.</td>
+          </tr>
+          <tr>
+            <td>7:30 – 10:30 am</td>
+            <td>
+              <div class="stop-name">Temple of Heaven</div>
+              <div><span class="badge badge-hist">Historical</span></div>
+              <div class="why">Built in 1420, this was where Ming and Qing emperors performed sacred rituals each winter solstice to pray for good harvests — believing themselves to be the divine link between heaven and earth. Its circular design embodies Chinese cosmology: heaven is round, earth is square. UNESCO World Heritage Site.</div>
+            </td>
+            <td class="note">Arrive early to watch locals in the surrounding park doing Tai Chi, water calligraphy, singing opera, and playing Chinese chess. Then visit the Hall of Prayer for Good Harvests and walk the Echo Wall and Circular Mound Altar.</td>
+            <td class="note">Buy the all-inclusive ticket to access all inner structures. The park opens at 6am — earlier entry means more local life to observe.</td>
+          </tr>
+          <tr>
+            <td>10:30 – 11:00 am</td>
+            <td>
+              <div class="stop-name">Transfer to Summer Palace</div>
+              <div><span class="badge badge-view">Scenic</span></div>
+            </td>
+            <td class="note">Take a Didi northwest across the city to the Summer Palace — about 20–25 minutes depending on traffic.</td>
+            <td class="note">Book the Didi in advance or ask your hotel to arrange a car for a fixed price if you prefer.</td>
+          </tr>
+          <tr>
+            <td>11:00 am – 2:00 pm</td>
+            <td>
+              <div class="stop-name">Summer Palace</div>
+              <div><span class="badge badge-view">Scenic</span> <span class="badge badge-hist">Historical</span></div>
+              <div class="why">Originally built in 1750 by Emperor Qianlong as a royal retreat, the Summer Palace was ransacked and burned by Anglo-French forces in 1860, then rebuilt by Empress Dowager Cixi who controversially diverted navy funds for its restoration. It stands as both a masterpiece of imperial garden design and a symbol of China's turbulent 19th century. UNESCO World Heritage Site.</div>
+            </td>
+            <td class="note">Stroll the famous Long Corridor (728m of painted galleries), take a boat on Kunming Lake, and climb Longevity Hill for panoramic views over the water and surrounding parkland. One of the most beautiful imperial gardens in China.</td>
+            <td class="note">Buy tickets online to skip the queue. A rowing boat on the lake is a lovely way to spend 30–40 minutes. Wear sunscreen — the lakeside is very exposed.</td>
+          </tr>
+          <tr>
+            <td>2:00 – 3:00 pm</td>
+            <td>
+              <div class="stop-name">Lunch near the palace</div>
+              <div><span class="badge badge-food">Food</span></div>
+            </td>
+            <td class="note">Several restaurants just outside the Summer Palace east gate serve good Cantonese and Beijing-style dishes. Or pack a simple picnic to eat by the lake.</td>
+            <td class="note">Avoid the overpriced stalls inside the palace grounds — better value and quality just outside the gates.</td>
+          </tr>
+          <tr>
+            <td>3:00 – 6:00 pm</td>
+            <td>
+              <div class="stop-name">798 Art District</div>
+              <div><span class="badge badge-mod">Modern</span></div>
+            </td>
+            <td class="note">About 30 min by Didi east. Wander through decommissioned Bauhaus-style factory buildings now filled with contemporary galleries, sculpture gardens, design studios, independent bookshops, and street art. A fascinating window into China's modern creative scene.</td>
+            <td class="note">Entry to the district is free — individual galleries may charge a small fee. UCCA Center for Contemporary Art is the standout venue. Afternoons are the liveliest time to visit.</td>
+          </tr>
+          <tr>
+            <td>6:00 pm onwards</td>
+            <td>
+              <div class="stop-name">Evening options</div>
+              <div><span class="badge badge-night">Option A</span> <span class="badge badge-cult">Option B</span></div>
+            </td>
+            <td colspan="2">
+              <div class="options-wrap">
+                <div class="option-block">
+                  <div class="option-label">Option A — Sanlitun</div>
+                  <div class="option-title">Dinner + bar district</div>
+                  <div class="option-desc">Head to Sanlitun for dinner at 6:00pm — Haidilao for hot pot, Jing Yaa Tang for upscale Beijing cuisine, or the many Sichuan and international restaurants around Taikoo Li. Then explore Beijing's premier nightlife strip: rooftop bars, craft beer spots, live music, and cocktail lounges all within walking distance. Things get lively from 9pm onwards.</div>
+                  <div class="option-tip">Best for: a lively, cosmopolitan night out. Very international crowd, easy to navigate.</div>
+                </div>
+                <div class="option-block">
+                  <div class="option-label">Option B — Peking Opera</div>
+                  <div class="option-title">Dinner near Qianmen + Liyuan Theatre</div>
+                  <div class="option-desc">Dine at 6:00pm near Qianmen — Bianyifang (est. 1416, one of Beijing's oldest Peking Duck restaurants) is an excellent choice and right by the theatre. At 7:30pm attend a traditional Peking Opera performance at the Liyuan Theatre inside the Qianmen Hotel — elaborate costumes, face paint, acrobatics, and live orchestra. Shows run about 1.5 hours with English subtitles. Optional nightcap at Shichahai lake (10 min by Didi) afterwards.</div>
+                  <div class="option-tip">Best for: a uniquely Beijing cultural experience. Book Liyuan tickets in advance — performances sell out. Bianyifang is a great alternative to Quanjude for Peking Duck.</div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
