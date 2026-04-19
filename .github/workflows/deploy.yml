@@ -19,4 +19,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
-          server-dir: /www/xn--b1acobgiubpgp5n.xn--p1ai
+          server-dir: /www/xn--b1acobgiubpgp5n.xn--p1ai/
