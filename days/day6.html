@@ -1,13 +1,185 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Day 6 - Coming Soon</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xi'an Day 6 Schedule</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f5f5f3;
+      display: flex;
+      justify-content: center;
+      padding: 2rem 1rem;
+      margin: 0;
+      color: #1a1a19;
+    }
+    .wrapper { max-width: 820px; width: 100%; }
+    h1 { font-size: 22px; font-weight: 500; margin: 0 0 4px; color: #1a1a19; }
+    .subtitle { font-size: 13px; color: #5f5e5a; margin-bottom: 1.5rem; }
+    * { box-sizing: border-box; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    thead th {
+      font-size: 12px; font-weight: 500; color: #5f5e5a;
+      text-align: left; padding: 8px 14px;
+      border-bottom: 0.5px solid #b4b2a9;
+      background: #f1efe8;
+    }
+    tbody tr { border-bottom: 0.5px solid #d3d1c7; }
+    tbody tr:last-child { border-bottom: none; }
+    td { padding: 12px 14px; vertical-align: top; line-height: 1.5; color: #1a1a19; }
+    td:first-child { white-space: nowrap; font-size: 13px; color: #5f5e5a; width: 120px; }
+    td:nth-child(2) { width: 170px; }
+    .stop-name { font-weight: 500; font-size: 14px; color: #1a1a19; }
+    .badge {
+      display: inline-block; font-size: 11px; font-weight: 500;
+      padding: 2px 8px; border-radius: 6px; margin-top: 4px;
+    }
+    .badge-hist  { background: #EEEDFE; color: #3C3489; }
+    .badge-food  { background: #FAECE7; color: #993C1D; }
+    .badge-view  { background: #E1F5EE; color: #085041; }
+    .badge-act   { background: #EAF3DE; color: #27500A; }
+    .badge-night { background: #E6F1FB; color: #0C447C; }
+    .badge-cult  { background: #FBEAF0; color: #72243E; }
+    .note { font-size: 13px; color: #444441; }
+    .why { font-size: 11px; color: #854F0B; background: #FAEEDA; border-radius: 5px; padding: 4px 8px; margin-top: 6px; line-height: 1.5; }
+    .card {
+      background: #ffffff;
+      border: 0.5px solid #d3d1c7;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .card-header {
+      padding: 14px 16px;
+      background: #f1efe8;
+      border-bottom: 0.5px solid #b4b2a9;
+    }
+    .card-header-title { font-size: 16px; font-weight: 500; color: #1a1a19; }
+    .card-header-sub { font-size: 12px; color: #5f5e5a; margin-top: 2px; }
+    .legend {
+      display: flex; gap: 16px; flex-wrap: wrap;
+      margin-bottom: 1rem; font-size: 12px; color: #5f5e5a;
+      align-items: center;
+    }
+    .legend-item { display: flex; align-items: center; gap: 5px; }
+    .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+  </style>
 </head>
 <body>
-  <h1>Day 6</h1>
-  <p>Coming soon.</p>
-  <a href="../index.html">Back to home</a>
+  <div class="wrapper">
+    <h1>Day 6 — Xi'an</h1>
+    <p class="subtitle">Great Mosque · Muslim Quarter · Shaanxi History Museum · Train to Shanghai</p>
+
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#7F77DD"></div> Historical</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#D4537E"></div> Culture</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#D85A30"></div> Food</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#1D9E75"></div> Scenic</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#378ADD"></div> Transit</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-header-title">Full day itinerary</div>
+        <div class="card-header-sub">Silk Road heritage in the morning, museum in the afternoon, overnight train to Shanghai</div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Stop</th>
+            <th>What to do</th>
+            <th>Tips</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>7:30 – 8:30 am</td>
+            <td>
+              <div class="stop-name">Breakfast — Muslim Quarter</div>
+              <div><span class="badge badge-food">Food</span></div>
+            </td>
+            <td class="note">Head to Huimin Street for an authentic Xi'an breakfast — warm bowls of yangrou paomo (lamb broth with torn flatbread), sesame-glazed pastries, and fresh pomegranate juice pressed at street stalls.</td>
+            <td class="note">The Muslim Quarter is quieter in the early morning than at any other time of day — a completely different atmosphere from the evening crowds. Enjoy it while it lasts.</td>
+          </tr>
+          <tr>
+            <td>8:30 – 10:30 am</td>
+            <td>
+              <div class="stop-name">Great Mosque of Xi'an</div>
+              <div><span class="badge badge-hist">Historical</span></div>
+              <div class="why">Founded in 742 AD during the Tang dynasty, this is one of the oldest and largest mosques in China — and one of the most architecturally unique in the world. Built entirely in Chinese imperial style rather than Arabic, it blends Islamic faith with Chinese pagodas, carved courtyards, and ornamental gates. It reflects Xi'an's position as the eastern gateway of the Silk Road, where Islamic merchants settled and assimilated over centuries.</div>
+            </td>
+            <td class="note">Enter through the ornamental gate on Huajue Lane, just off Huimin Street. Walk slowly through the four successive courtyards — each is more beautiful than the last. The prayer hall at the far end is the spiritual heart of the complex.</td>
+            <td class="note">Modest dress required — cover shoulders and knees. Remove shoes before entering the prayer hall. Non-Muslims may not enter during prayer times (around 12pm and 3pm). Morning is the most peaceful time to visit.</td>
+          </tr>
+          <tr>
+            <td>10:30 am – 12:30 pm</td>
+            <td>
+              <div class="stop-name">Muslim Quarter food street</div>
+              <div><span class="badge badge-food">Food</span></div>
+              <div><span class="badge badge-cult">Culture</span></div>
+            </td>
+            <td class="note">Spend two hours exploring Huimin Street and its surrounding lanes — one of the great food markets in China. Graze your way through: rou jia mo (braised pork flatbread), biang biang noodles with chilli oil, lamb skewers fresh off the grill, liangpi cold skin noodles, and persimmon cakes. The smells, sounds, and energy of the quarter are extraordinary.</td>
+            <td class="note">Go hungry and graze widely rather than committing to one restaurant. The best stalls are on the side lanes branching off the main street — look for the longest queues of locals. Bring cash as many vendors don't take cards.</td>
+          </tr>
+          <tr>
+            <td>12:30 – 1:30 pm</td>
+            <td>
+              <div class="stop-name">Lunch & rest</div>
+              <div><span class="badge badge-food">Food</span></div>
+            </td>
+            <td class="note">Sit down for a proper lunch at Lao Sun Jia — one of Xi'an's most famous restaurants, just off the Muslim Quarter, serving classic mutton paomo and other Shaanxi specialities in a traditional setting.</td>
+            <td class="note">This is a good moment to sit, rest your feet, and let the morning's impressions settle before the museum. You've been on your feet since 7:30am.</td>
+          </tr>
+          <tr>
+            <td>2:00 – 4:30 pm</td>
+            <td>
+              <div class="stop-name">Shaanxi History Museum</div>
+              <div><span class="badge badge-hist">Historical</span></div>
+              <div class="why">One of China's finest museums, housing over 370,000 artefacts spanning 1.5 million years of history in the Shaanxi region — the heartland of Chinese civilisation. The collection includes Tang dynasty gold and silverware, Han dynasty terracotta figures, prehistoric tools, and Silk Road treasures that bring everything you've seen at the Terracotta Army into broader context. Free entry makes it one of the best value cultural experiences in China.</div>
+            </td>
+            <td class="note">Focus on the Tang dynasty galleries (2nd floor) — the gold, silver, and ceramic pieces from this period are world-class. The special exhibition hall requires a separate free ticket, available from the front desk — collect it on arrival as numbers are limited.</td>
+            <td class="note">Entry is free but requires advance reservation via their official WeChat account or website. Allow 2–2.5 hours. The museum is a 15-minute Didi from the Muslim Quarter.</td>
+          </tr>
+          <tr>
+            <td>4:30 – 5:30 pm</td>
+            <td>
+              <div class="stop-name">Return to hotel & pack</div>
+              <div><span class="badge badge-view">Scenic</span></div>
+            </td>
+            <td class="note">Head back to the hotel to collect luggage and check out. Take a final slow walk through the streets near the Bell Tower if time allows — a quiet farewell to Xi'an before the journey.</td>
+            <td class="note">Allow at least 30 minutes buffer before leaving for the station. Xi'an North Railway Station (where high-speed trains depart) is about 20–25 minutes by Didi from the city centre.</td>
+          </tr>
+          <tr>
+            <td>5:30 – 6:30 pm</td>
+            <td>
+              <div class="stop-name">Transfer to Xi'an North Station</div>
+              <div><span class="badge badge-view">Scenic</span></div>
+            </td>
+            <td class="note">Take a Didi to Xi'an North Station with luggage. Arrive at least 45 minutes before departure — high-speed rail stations in China are large and security queues can take 15–20 minutes.</td>
+            <td class="note">Pick up snacks and drinks at the station convenience stores for the journey. The train has a dining car but station food is better value and quality.</td>
+          </tr>
+          <tr>
+            <td>~6:30 pm</td>
+            <td>
+              <div class="stop-name">High-speed train to Shanghai</div>
+              <div><span class="badge badge-view">Scenic</span></div>
+            </td>
+            <td class="note">Board the G-train to Shanghai Hongqiao — approximately 6 hours. Watch the landscape shift from the dry Shaanxi plateau through the Qinling Mountains and into the green Yangtze River delta as you approach Shanghai. A genuinely beautiful evening journey.</td>
+            <td class="note">Book second class — perfectly comfortable for the journey. Reserve seats on the same side (seats A and F for window seats on both sides) so you can both enjoy the views. Bring a neck pillow for the latter half.</td>
+          </tr>
+          <tr>
+            <td>~12:30 am</td>
+            <td>
+              <div class="stop-name">Arrive Shanghai — dinner & rest</div>
+              <div><span class="badge badge-food">Food</span></div>
+            </td>
+            <td class="note">Arrive at Shanghai Hongqiao station late. Take the metro or a Didi to your hotel. Grab a simple late-night meal near the hotel — Shanghai has excellent 24-hour noodle shops and convenience stores with hot food. Get to bed early — Day 7 is one of the best days of the entire trip.</td>
+            <td class="note">Pre-book your Shanghai hotel before arriving — late night check-ins are straightforward but confirm with the hotel that 24-hour reception is available. The French Concession or Jing'an areas are ideal bases.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </body>
 </html>

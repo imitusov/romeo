@@ -1,13 +1,183 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Day 4 - Coming Soon</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 4 — Beijing to Xi'an</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f5f5f3;
+      display: flex;
+      justify-content: center;
+      padding: 2rem 1rem;
+      margin: 0;
+      color: #1a1a19;
+    }
+    .wrapper { max-width: 820px; width: 100%; }
+    h1 { font-size: 22px; font-weight: 500; margin: 0 0 4px; color: #1a1a19; }
+    .subtitle { font-size: 13px; color: #5f5e5a; margin-bottom: 1.5rem; }
+    * { box-sizing: border-box; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    thead th {
+      font-size: 12px; font-weight: 500; color: #5f5e5a;
+      text-align: left; padding: 8px 14px;
+      border-bottom: 0.5px solid #b4b2a9;
+      background: #f1efe8;
+    }
+    tbody tr { border-bottom: 0.5px solid #d3d1c7; }
+    tbody tr:last-child { border-bottom: none; }
+    td { padding: 12px 14px; vertical-align: top; line-height: 1.5; color: #1a1a19; }
+    td:first-child { white-space: nowrap; font-size: 13px; color: #5f5e5a; width: 120px; }
+    td:nth-child(2) { width: 170px; }
+    .stop-name { font-weight: 500; font-size: 14px; color: #1a1a19; }
+    .badge {
+      display: inline-block; font-size: 11px; font-weight: 500;
+      padding: 2px 8px; border-radius: 6px; margin-top: 4px;
+    }
+    .badge-hist  { background: #EEEDFE; color: #3C3489; }
+    .badge-food  { background: #FAECE7; color: #993C1D; }
+    .badge-view  { background: #E1F5EE; color: #085041; }
+    .badge-shop  { background: #EAF3DE; color: #27500A; }
+    .badge-trans { background: #E6F1FB; color: #0C447C; }
+    .badge-night { background: #FBEAF0; color: #72243E; }
+    .note { font-size: 13px; color: #444441; }
+    .why { font-size: 11px; color: #854F0B; background: #FAEEDA; border-radius: 5px; padding: 4px 8px; margin-top: 6px; line-height: 1.5; }
+    .card {
+      background: #ffffff;
+      border: 0.5px solid #d3d1c7;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .card-header {
+      padding: 14px 16px;
+      background: #f1efe8;
+      border-bottom: 0.5px solid #b4b2a9;
+    }
+    .card-header-title { font-size: 16px; font-weight: 500; color: #1a1a19; }
+    .card-header-sub { font-size: 12px; color: #5f5e5a; margin-top: 2px; }
+    .legend {
+      display: flex; gap: 16px; flex-wrap: wrap;
+      margin-bottom: 1rem; font-size: 12px; color: #5f5e5a;
+      align-items: center;
+    }
+    .legend-item { display: flex; align-items: center; gap: 5px; }
+    .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .transit-bar {
+      background: #E6F1FB;
+      border-left: 3px solid #378ADD;
+      border-radius: 0;
+      padding: 10px 14px;
+      font-size: 13px;
+      color: #0C447C;
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
-  <h1>Day 4</h1>
-  <p>Coming soon.</p>
-  <a href="../index.html">Back to home</a>
+  <div class="wrapper">
+    <h1>Day 4 — Beijing to Xi'an</h1>
+    <p class="subtitle">Panjiayuan Antique Market · High-speed train · First taste of Xi'an</p>
+
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#639922"></div> Shopping</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#D85A30"></div> Food</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#378ADD"></div> Transit</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#1D9E75"></div> Scenic</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#D4537E"></div> Nightlife</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-header-title">Full day itinerary</div>
+        <div class="card-header-sub">Final Beijing morning at the antique market, afternoon bullet train, Xi'an arrival by evening</div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Stop</th>
+            <th>What to do</th>
+            <th>Tips</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>7:30 – 8:30 am</td>
+            <td>
+              <div class="stop-name">Breakfast & check out</div>
+              <div><span class="badge badge-food">Food</span></div>
+            </td>
+            <td class="note">Have a final Beijing breakfast near your hotel — congee, fried dough sticks, or a bowl of zhajiangmian. Check out and store luggage at the hotel before heading to Panjiayuan. Most hotels hold bags for free until evening.</td>
+            <td class="note">Confirm luggage storage with your hotel the night before. Don't bring large bags to the market — you'll want both hands free for browsing.</td>
+          </tr>
+          <tr>
+            <td>8:30 – 11:00 am</td>
+            <td>
+              <div class="stop-name">Panjiayuan Antique Market</div>
+              <div><span class="badge badge-shop">Shopping</span></div>
+              <div class="why">Established in the early 1990s, Panjiayuan is the largest antique and curio market in China — over 3,000 dealers spread across an enormous outdoor complex in southeast Beijing. Originally a weekend dawn market where dealers would lay out finds by torchlight, it has grown into a permanent institution. You'll find everything from genuine antiques and Silk Road artefacts to Mao-era memorabilia, calligraphy, jade, vintage maps, and handmade folk crafts from across China's ethnic minority regions.</div>
+            </td>
+            <td class="note">Start at the outdoor stalls in the southern section — the most atmospheric and chaotic, with the greatest variety. The indoor halls in the north have more established (and more expensive) dealers with genuinely old pieces. The furniture warehouse at the back is extraordinary even if you're not buying.</td>
+            <td class="note">Bargaining is mandatory — open at 25–30% of the asking price and work up slowly. Dealers expect it and won't be offended. Bring cash (RMB) as many stalls don't take cards. Weekday mornings are calmer than weekends. Watch for reproductions sold as genuine antiques — buy what you love, not what you're told is valuable.</td>
+          </tr>
+          <tr>
+            <td>11:00 am – 12:00 pm</td>
+            <td>
+              <div class="stop-name">Lunch near Panjiayuan</div>
+              <div><span class="badge badge-food">Food</span></div>
+            </td>
+            <td class="note">Several good local restaurants cluster around the market's north exit. Try a bowl of beef noodles or dumplings — simple, fast, and satisfying before a long train journey. A final taste of Beijing before Xi'an's very different cuisine takes over.</td>
+            <td class="note">Keep lunch light and quick — you need to collect luggage, get to the station, and clear security with enough buffer before departure.</td>
+          </tr>
+          <tr>
+            <td>12:00 – 1:00 pm</td>
+            <td>
+              <div class="stop-name">Collect luggage & transfer to station</div>
+              <div><span class="badge badge-trans">Transit</span></div>
+            </td>
+            <td class="note">Didi back to the hotel to collect luggage, then straight to Beijing West Station — the main departure point for Xi'an high-speed trains. Journey from central Beijing to the station takes 20–30 minutes depending on traffic.</td>
+            <td class="note">Beijing West Station is large and busy — allow at least 45 minutes before train departure to clear security, find the platform, and board. Don't cut it close with luggage.</td>
+          </tr>
+          <tr>
+            <td>~1:30 pm</td>
+            <td>
+              <div class="stop-name">High-speed train to Xi'an</div>
+              <div><span class="badge badge-trans">Transit</span></div>
+            </td>
+            <td class="note">Board the G-train from Beijing West to Xi'an North — approximately 4.5 hours. The journey passes through Hebei and Shanxi provinces, with dramatic views of the Taihang Mountains in the middle section. A comfortable, scenic ride — far better than flying for this route.</td>
+            <td class="note">Book second class seats in advance on Trip.com or the 12306 app. Seats D and F are window seats on the same side — good for travelling together. The train has a dining car; alternatively stock up at the station convenience stores before boarding.</td>
+          </tr>
+          <tr>
+            <td>~6:00 pm</td>
+            <td>
+              <div class="stop-name">Arrive Xi'an North Station</div>
+              <div><span class="badge badge-view">Scenic</span></div>
+            </td>
+            <td class="note">Arrive at Xi'an North Station and take the Metro Line 2 or a Didi directly to your hotel in the city centre. The South Gate and Bell Tower area are the best bases — central, walkable, and close to everything on Days 5 and 6.</td>
+            <td class="note">Metro Line 2 from Xi'an North runs directly into the city centre in about 20 minutes and costs just 4 RMB — much cheaper than a taxi and nearly as fast. Good option if luggage is manageable.</td>
+          </tr>
+          <tr>
+            <td>6:30 – 7:30 pm</td>
+            <td>
+              <div class="stop-name">Check in & freshen up</div>
+              <div><span class="badge badge-view">Scenic</span></div>
+            </td>
+            <td class="note">Check in to your hotel, drop bags, and take 30 minutes to freshen up. Take a short walk around the Bell Tower area to get your bearings — the towers are beautifully lit at night and it's a lovely introduction to the city.</td>
+            <td class="note">Stay as close to the South Gate or Bell Tower as possible — you'll save significant time on both Days 5 and 6. The Huimin Street area inside the Muslim Quarter also has good guesthouse options with real local character.</td>
+          </tr>
+          <tr>
+            <td>7:30 – 9:30 pm</td>
+            <td>
+              <div class="stop-name">Muslim Quarter — first evening</div>
+              <div><span class="badge badge-night">Nightlife</span></div>
+            </td>
+            <td class="note">Head straight to Huimin Street for your first taste of Xi'an street food — rou jia mo, biang biang noodles, lamb skewers, and cold pomegranate juice. Don't overeat — this is a preview, not the full experience. The quarter is at its most atmospheric and lively in the early evening.</td>
+            <td class="note">Don't stay too late — tomorrow's Terracotta Army day starts early and is one of the most important days of the entire trip. A 9:30pm finish and early night is the right call.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </body>
 </html>
