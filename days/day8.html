@@ -1,13 +1,231 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Day 8 - Coming Soon</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shanghai Day 8 Schedule</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f5f5f3;
+      display: flex;
+      justify-content: center;
+      padding: 2rem 1rem;
+      margin: 0;
+      color: #1a1a19;
+    }
+    .wrapper { max-width: 820px; width: 100%; }
+    h1 { font-size: 22px; font-weight: 500; margin: 0 0 4px; color: #1a1a19; }
+    .subtitle { font-size: 13px; color: #5f5e5a; margin-bottom: 1.5rem; }
+    * { box-sizing: border-box; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    thead th {
+      font-size: 12px; font-weight: 500; color: #5f5e5a;
+      text-align: left; padding: 8px 14px;
+      border-bottom: 0.5px solid #b4b2a9;
+      background: #f1efe8;
+    }
+    tbody tr { border-bottom: 0.5px solid #d3d1c7; }
+    tbody tr:last-child { border-bottom: none; }
+    td { padding: 12px 14px; vertical-align: top; line-height: 1.5; color: #1a1a19; }
+    td:first-child { white-space: nowrap; font-size: 13px; color: #5f5e5a; width: 120px; }
+    td:nth-child(2) { width: 170px; }
+    .stop-name { font-weight: 500; font-size: 14px; color: #1a1a19; }
+    .badge {
+      display: inline-block; font-size: 11px; font-weight: 500;
+      padding: 2px 8px; border-radius: 6px; margin-top: 4px;
+    }
+    .badge-hist  { background: #EEEDFE; color: #3C3489; }
+    .badge-food  { background: #FAECE7; color: #993C1D; }
+    .badge-view  { background: #E1F5EE; color: #085041; }
+    .badge-mod   { background: #E6F1FB; color: #0C447C; }
+    .badge-walk  { background: #EAF3DE; color: #27500A; }
+    .badge-museum { background: #FBEAF0; color: #72243E; }
+    .badge-night { background: #FAEEDA; color: #633806; }
+    .note { font-size: 13px; color: #444441; }
+    .why { font-size: 11px; color: #854F0B; background: #FAEEDA; border-radius: 5px; padding: 4px 8px; margin-top: 6px; line-height: 1.5; }
+    .card {
+      background: #ffffff;
+      border: 0.5px solid #d3d1c7;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .card-header {
+      padding: 14px 16px;
+      background: #f1efe8;
+      border-bottom: 0.5px solid #b4b2a9;
+    }
+    .card-header-title { font-size: 16px; font-weight: 500; color: #1a1a19; }
+    .card-header-sub { font-size: 12px; color: #5f5e5a; margin-top: 2px; }
+    .legend {
+      display: flex; gap: 16px; flex-wrap: wrap;
+      margin-bottom: 1rem; font-size: 12px; color: #5f5e5a;
+      align-items: center;
+    }
+    .legend-item { display: flex; align-items: center; gap: 5px; }
+    .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .section-divider {
+      font-size: 11px; font-weight: 500; color: #5f5e5a;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      background: #f7f6f2; padding: 6px 14px;
+      border-top: 0.5px solid #d3d1c7;
+      border-bottom: 0.5px solid #d3d1c7;
+    }
+    .options-wrap { display: flex; flex-direction: column; gap: 10px; margin-top: 2px; }
+    .option-block { border: 0.5px solid #d3d1c7; border-radius: 8px; padding: 10px 12px; background: #fafaf8; }
+    .option-label { font-size: 11px; font-weight: 500; color: #5f5e5a; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+    .option-title { font-size: 13px; font-weight: 500; color: #1a1a19; margin-bottom: 3px; }
+    .option-desc  { font-size: 12px; color: #444441; line-height: 1.5; }
+    .option-tip   { font-size: 11px; color: #5f5e5a; margin-top: 4px; font-style: italic; }
+  </style>
 </head>
 <body>
-  <h1>Day 8</h1>
-  <p>Coming soon.</p>
-  <a href="../index.html">Back to home</a>
+  <div class="wrapper">
+    <h1>Day 8 — Shanghai</h1>
+    <p class="subtitle">Zhujiajiao Water Town · Shanghai Museum · Jing'an Temple · Evening your way</p>
+
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#1D9E75"></div> Scenic</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#7F77DD"></div> Historical</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#D4537E"></div> Museum</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#639922"></div> Walking</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#D85A30"></div> Food</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#EF9F27"></div> Nightlife</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-header-title">Full day itinerary</div>
+        <div class="card-header-sub">Ancient canals in the morning, world-class museum in the afternoon, evening your way</div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Stop</th>
+            <th>What to do</th>
+            <th>Tips</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="4" class="section-divider">Morning — Zhujiajiao Water Town</td>
+          </tr>
+          <tr>
+            <td>7:00 – 7:30 am</td>
+            <td>
+              <div class="stop-name">Early departure</div>
+              <div><span class="badge badge-view">Scenic</span></div>
+            </td>
+            <td class="note">Leave your hotel by 7:00–7:30am for Zhujiajiao. Take a Didi (45 min, ~80 RMB) or the public bus 1000 from People's Square (1 hr, much cheaper). Private car is recommended for comfort and flexibility on the return.</td>
+            <td class="note">Arriving before 9am is the key to the best Zhujiajiao experience — canals are quiet, light is soft, and the stone bridges and whitewashed walls have an almost otherworldly stillness before the day-trippers arrive.</td>
+          </tr>
+          <tr>
+            <td>8:00 – 11:30 am</td>
+            <td>
+              <div class="stop-name">Zhujiajiao Water Town</div>
+              <div><span class="badge badge-hist">Historical</span><span class="badge badge-view" style="margin-left:4px">Scenic</span></div>
+              <div class="why">A 1,700-year-old canal town in the Qingpu district, often called the Venice of Shanghai. Over 36 ancient stone bridges still cross its waterways, Ming and Qing dynasty houses line the canals, and traditional vendors sell local specialities along cobbled lanes. A world completely apart from the city 45 minutes away.</div>
+            </td>
+            <td class="note">Start at Fangsheng Bridge — the iconic 5-arch stone bridge that is the heart of the town — and walk the northern canal lane for the quietest early-morning atmosphere. Then hire a private gondola (~100 RMB for 20 min) to access the back waterways that the group boats don't reach. End by browsing the food stalls around the central bazaar.</td>
+            <td class="note">Buy the all-inclusive scenic area ticket at the entrance gate — covers the main temples, gardens, and historic houses. Wear comfortable shoes — the cobbled lanes are uneven. Try zongzi (sticky rice parcels), pork belly buns, and fresh tofu at the street stalls — Zhujiajiao's local food is excellent and very cheap.</td>
+          </tr>
+          <tr>
+            <td>11:30 am – 12:30 pm</td>
+            <td>
+              <div class="stop-name">Lunch in Zhujiajiao</div>
+              <div><span class="badge badge-food">Food</span></div>
+            </td>
+            <td class="note">Sit down for lunch at one of the canalside restaurants before heading back — fresh river shrimp, braised pork trotters (a local speciality), and steamed river fish. The restaurants on the quieter north canal have the most atmospheric settings with water views.</td>
+            <td class="note">Avoid the tourist restaurants right at the main entrance. Walk 5 minutes further into the town for better quality and lower prices. The north canal restaurants are half the price of the south side and significantly better.</td>
+          </tr>
+          <tr>
+            <td>12:30 – 1:30 pm</td>
+            <td>
+              <div class="stop-name">Return to Shanghai</div>
+              <div><span class="badge badge-view">Scenic</span></div>
+            </td>
+            <td class="note">Didi or pre-arranged car back to central Shanghai — approximately 45 minutes. Drop off near People's Square for a smooth transition to the Shanghai Museum. Good time to rest in the car and recharge before the afternoon.</td>
+            <td class="note">If you took the bus out, the return Didi is worth the extra cost — you'll arrive fresher for the museum visit.</td>
+          </tr>
+          <tr>
+            <td colspan="4" class="section-divider">Afternoon — People's Square & Jing'an</td>
+          </tr>
+          <tr>
+            <td>2:00 – 4:30 pm</td>
+            <td>
+              <div class="stop-name">Shanghai Museum</div>
+              <div><span class="badge badge-museum">Museum</span><span class="badge badge-hist" style="margin-left:4px">Historical</span></div>
+              <div class="why">One of China's great museums of ancient art — 120,000 artefacts across 11 galleries covering bronzeware, ceramics, calligraphy, jade, furniture, and coins. The ancient bronze collection is one of the finest in the world and gives brilliant context to China's civilisational depth. Free entry. Located in a striking circular building on People's Square.</div>
+            </td>
+            <td class="note">Prioritise the Ancient Chinese Bronze Gallery (Ground Floor) and the Ancient Chinese Ceramics Gallery (1st Floor) — these two are the strongest in the world for their respective collections. The Ancient Chinese Jade Gallery and the Ming & Qing Furniture Gallery are also exceptional. The free audio guide is available via the museum's WeChat mini-programme.</td>
+            <td class="note">Free entry but requires advance reservation via the museum's WeChat account or official website — essential on weekends. Bring passport. The museum closes at 5pm — arrive by 2pm at the latest for a proper visit. Allow 2–2.5 hours minimum. No photography in some galleries.</td>
+          </tr>
+          <tr>
+            <td>4:30 – 5:00 pm</td>
+            <td>
+              <div class="stop-name">People's Square walk</div>
+              <div><span class="badge badge-walk">Walking</span></div>
+            </td>
+            <td class="note">Take a short walk around People's Square itself — one of Shanghai's great urban public spaces, flanked by the Grand Theatre, the Urban Planning Exhibition Centre, and the Museum of Contemporary Art. The square has a very different energy from the Bund — more local and civic than touristic.</td>
+            <td class="note">The Shanghai Urban Planning Exhibition Centre next to the museum has a famous 1:500 scale model of the entire city on its 3rd floor — a remarkable aerial view of Shanghai's built form. Free to enter and worth 20 minutes.</td>
+          </tr>
+          <tr>
+            <td>5:00 – 6:00 pm</td>
+            <td>
+              <div class="stop-name">Jing'an Temple</div>
+              <div><span class="badge badge-hist">Historical</span><span class="badge badge-view" style="margin-left:4px">Scenic</span></div>
+              <div class="why">One of Shanghai's most extraordinary contrasts — a fully gilded Buddhist temple originally founded in 247 AD, now completely surrounded by luxury malls, glass towers, and one of the city's busiest metro intersections. The juxtaposition of incense smoke, chanting monks, and Ferraris driving past outside is uniquely Shanghai.</div>
+            </td>
+            <td class="note">Enter from the south gate on Nanjing West Road. The main hall contains a famous jade Buddha and a Ming dynasty bronze bell. Climb to the upper floors of the pagoda for views across the Jing'an rooftops. The back buildings are less crowded than the main courtyard and more atmospheric.</td>
+            <td class="note">Entry is 50 RMB — pay via WeChat or Alipay at the gate. Open until 5pm so time your arrival accordingly. The Jing'an district around the temple is one of Shanghai's most elegant neighbourhoods — worth a wander along Nanjing West Road before dinner.</td>
+          </tr>
+          <tr>
+            <td>6:00 – 7:30 pm</td>
+            <td>
+              <div class="stop-name">Dinner — Jing'an area</div>
+              <div><span class="badge badge-food">Food</span></div>
+            </td>
+            <td class="note">The Jing'an district has excellent dinner options. Mercato (Italian, great pizza) and Ultraman (modern Chinese) are both strong choices on or near Nanjing West Road. For something more local, the basement food hall of the HKRI Taikoo Hui mall has outstanding Shanghai-style small plates and dumplings at reasonable prices.</td>
+            <td class="note">The HKRI Taikoo Hui food hall is one of the best curated food spaces in Shanghai — it brings together top local brands under one roof. A perfect spot if you want variety or if you're undecided — browse before committing to a table.</td>
+          </tr>
+          <tr>
+            <td colspan="4" class="section-divider">Evening — choose your night</td>
+          </tr>
+          <tr>
+            <td>8:00 pm onwards</td>
+            <td>
+              <div class="stop-name">Evening options</div>
+              <div><span class="badge badge-night">Option A</span>
+              <span class="badge badge-night" style="margin-left:4px">Option B</span>
+              <span class="badge badge-night" style="margin-left:4px">Option C</span></div>
+            </td>
+            <td colspan="2">
+              <div class="options-wrap">
+                <div class="option-block">
+                  <div class="option-label">Option A — Yongkang Road</div>
+                  <div class="option-title">Casual craft beer, local crowd</div>
+                  <div class="option-desc">A short residential street in the French Concession that has become Shanghai's most relaxed drinking destination — pavement seating, craft beer bars, wine bars, and street food vendors. Boxing Cat Brewery and Bionic Brew are the standout spots. The street fills up from 8pm onwards with a genuinely local crowd — no tourist trap energy. Perfect for a warm evening beer with your brother and no agenda.</div>
+                  <div class="option-tip">Best for: winding down after a full day. Very walkable from Jing'an (15 min Didi). Arrive by 8pm for a pavement table.</div>
+                </div>
+                <div class="option-block">
+                  <div class="option-label">Option B — Jing'an rooftop bars</div>
+                  <div class="option-title">Elevated views, upscale cocktails</div>
+                  <div class="option-desc">Stay in the Jing'an neighbourhood and head up to one of the rooftop bars above the treeline — views across the French Concession roofscape with the Pudong towers glowing in the distance. Bar at 45 (on the Puli Hotel), the rooftop at The Middle House, and CHAR Bar at the Hotel Indigo are all within 10 minutes of each other. A more sophisticated evening than Yongkang Road, with excellent cocktail programmes.</div>
+                  <div class="option-tip">Best for: a refined evening with great views. Book ahead for weekends — these rooftop spots fill up by 9pm. The Middle House rooftop is the most beautifully designed of the three.</div>
+                </div>
+                <div class="option-block">
+                  <div class="option-label">Option C — Speak Low speakeasy</div>
+                  <div class="option-title">Hidden bar behind a bookshelf</div>
+                  <div class="option-desc">Take a Didi to 579 Fuxing Zhong Lu in the French Concession. Walk into what appears to be a bar equipment shop — find the bookshelf at the back, ring the bell, and enter Speak Low. One of Asia's best cocktail bars across four floors, each with a different concept. The bartenders are outstanding and speak English well. Cocktails incorporate Chinese ingredients — aged pu-erh tea, osmanthus, Sichuan pepper — in genuinely creative ways.</div>
+                  <div class="option-tip">Best for: a memorable, unique experience. Can get busy from 9:30pm — arrive at 8pm to guarantee a seat. No reservation system — first come, first served. Budget around 150–200 RMB per cocktail.</div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </body>
 </html>

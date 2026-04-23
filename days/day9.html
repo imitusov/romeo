@@ -1,13 +1,212 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Day 9 - Coming Soon</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 9 — Shanghai to Hangzhou</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f5f5f3;
+      display: flex;
+      justify-content: center;
+      padding: 2rem 1rem;
+      margin: 0;
+      color: #1a1a19;
+    }
+    .wrapper { max-width: 820px; width: 100%; }
+    h1 { font-size: 22px; font-weight: 500; margin: 0 0 4px; color: #1a1a19; }
+    .subtitle { font-size: 13px; color: #5f5e5a; margin-bottom: 1.5rem; }
+    * { box-sizing: border-box; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    thead th {
+      font-size: 12px; font-weight: 500; color: #5f5e5a;
+      text-align: left; padding: 8px 14px;
+      border-bottom: 0.5px solid #b4b2a9;
+      background: #f1efe8;
+    }
+    tbody tr { border-bottom: 0.5px solid #d3d1c7; }
+    tbody tr:last-child { border-bottom: none; }
+    td { padding: 12px 14px; vertical-align: top; line-height: 1.5; color: #1a1a19; }
+    td:first-child { white-space: nowrap; font-size: 13px; color: #5f5e5a; width: 120px; }
+    td:nth-child(2) { width: 170px; }
+    .stop-name { font-weight: 500; font-size: 14px; color: #1a1a19; }
+    .badge {
+      display: inline-block; font-size: 11px; font-weight: 500;
+      padding: 2px 8px; border-radius: 6px; margin-top: 4px;
+    }
+    .badge-hist  { background: #EEEDFE; color: #3C3489; }
+    .badge-food  { background: #FAECE7; color: #993C1D; }
+    .badge-view  { background: #E1F5EE; color: #085041; }
+    .badge-walk  { background: #EAF3DE; color: #27500A; }
+    .badge-trans { background: #E6F1FB; color: #0C447C; }
+    .badge-cult  { background: #FBEAF0; color: #72243E; }
+    .badge-night { background: #FAEEDA; color: #633806; }
+    .note { font-size: 13px; color: #444441; }
+    .why { font-size: 11px; color: #854F0B; background: #FAEEDA; border-radius: 5px; padding: 4px 8px; margin-top: 6px; line-height: 1.5; }
+    .card {
+      background: #ffffff;
+      border: 0.5px solid #d3d1c7;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .card-header {
+      padding: 14px 16px;
+      background: #f1efe8;
+      border-bottom: 0.5px solid #b4b2a9;
+    }
+    .card-header-title { font-size: 16px; font-weight: 500; color: #1a1a19; }
+    .card-header-sub { font-size: 12px; color: #5f5e5a; margin-top: 2px; }
+    .legend {
+      display: flex; gap: 16px; flex-wrap: wrap;
+      margin-bottom: 1rem; font-size: 12px; color: #5f5e5a;
+      align-items: center;
+    }
+    .legend-item { display: flex; align-items: center; gap: 5px; }
+    .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .section-divider {
+      font-size: 11px; font-weight: 500; color: #5f5e5a;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      background: #f7f6f2; padding: 6px 14px;
+      border-top: 0.5px solid #d3d1c7;
+      border-bottom: 0.5px solid #d3d1c7;
+    }
+  </style>
 </head>
 <body>
-  <h1>Day 9</h1>
-  <p>Coming soon.</p>
-  <a href="../index.html">Back to home</a>
+  <div class="wrapper">
+    <h1>Day 9 — Shanghai to Hangzhou</h1>
+    <p class="subtitle">Bullet train · West Lake · Su Causeway · Leifeng Pagoda · Impression West Lake show</p>
+
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#378ADD"></div> Transit</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#1D9E75"></div> Scenic</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#639922"></div> Walking</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#7F77DD"></div> Historical</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#D85A30"></div> Food</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#D4537E"></div> Culture</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-header-title">Full day itinerary</div>
+        <div class="card-header-sub">45-minute bullet train, West Lake all afternoon, Impression show at night</div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Stop</th>
+            <th>What to do</th>
+            <th>Tips</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="4" class="section-divider">Morning — Travel to Hangzhou</td>
+          </tr>
+          <tr>
+            <td>7:00 am</td>
+            <td>
+              <div class="stop-name">Hotel checkout & transfer</div>
+              <div><span class="badge badge-trans">Transit</span></div>
+            </td>
+            <td class="note">Check out of your Shanghai hotel and take a pre-booked Didi to Shanghai Hongqiao Railway Station. Allow 40 minutes from central Shanghai — morning traffic can be slow. Store or check in larger bags if your Hangzhou hotel allows early luggage drop.</td>
+            <td class="note">Book the Didi the night before or ask the hotel concierge to arrange a car. Have your Hangzhou hotel name written in Chinese characters ready to show the Hangzhou taxi driver on arrival.</td>
+          </tr>
+          <tr>
+            <td>~8:15 am</td>
+            <td>
+              <div class="stop-name">Bullet train to Hangzhou</div>
+              <div><span class="badge badge-trans">Transit</span></div>
+            </td>
+            <td class="note">Board the G-train from Shanghai Hongqiao to Hangzhou East — approximately 45 minutes. One of the shortest and most pleasant bullet train journeys in China. Grab breakfast at the station convenience stores before boarding.</td>
+            <td class="note">Book tickets in advance on Trip.com or 12306. Trains run every 15–20 minutes so there's flexibility, but book a specific train to guarantee seats. Hangzhou East Station is well connected to the city centre by metro and taxi.</td>
+          </tr>
+          <tr>
+            <td>~9:15 am</td>
+            <td>
+              <div class="stop-name">Arrive Hangzhou — check in</div>
+              <div><span class="badge badge-view">Scenic</span></div>
+            </td>
+            <td class="note">Take a Didi from Hangzhou East Station to your hotel — about 20 minutes. The best bases for West Lake are along Nanshan Road (southern shore) or Beishan Road (northern shore) — both put you within walking distance of the lake. Check in or drop bags and freshen up before heading out.</td>
+            <td class="note">Stay as close to the lake as possible — you'll spend most of both days around it. Hotels on Nanshan Road give easy access to the Su Causeway, Leifeng Pagoda, and the Impression show venue.</td>
+          </tr>
+          <tr>
+            <td colspan="4" class="section-divider">Afternoon — West Lake</td>
+          </tr>
+          <tr>
+            <td>10:30 am – 12:00 pm</td>
+            <td>
+              <div class="stop-name">Su Causeway walk</div>
+              <div><span class="badge badge-walk">Walking</span><span class="badge badge-view" style="margin-left:4px">Scenic</span></div>
+              <div class="why">A 2.8 km causeway built by the poet Su Dongpo during the Northern Song dynasty (1089 AD) as a flood control embankment. Now lined with peach trees, weeping willows, and six ornamental stone bridges, it divides the western part of West Lake and offers the most beautiful uninterrupted lakeside walking in Hangzhou. The view east across the open water towards the pagoda and mountains is the classic West Lake image.</div>
+            </td>
+            <td class="note">Enter from the northern end near Yue Fei Temple and walk south — this direction gives you the best views of the pagoda emerging from the southern hills as you walk. The causeway is 2.8km end to end — allow 45–60 minutes at a relaxed pace with stops. Early morning is misty and magical; late afternoon is golden and warm.</td>
+            <td class="note">The causeway is free to walk and open 24 hours. Rent a bicycle at the northern entrance (around 20 RMB/hr) for a faster circuit if preferred. The six stone arch bridges along the way are each slightly different — look for the carved balustrades.</td>
+          </tr>
+          <tr>
+            <td>12:00 – 1:00 pm</td>
+            <td>
+              <div class="stop-name">Lunch — Nanshan Road</div>
+              <div><span class="badge badge-food">Food</span></div>
+            </td>
+            <td class="note">Head to Nanshan Road along the southern shore for lunch — the street is lined with excellent Hangzhou cuisine restaurants. Try Grandma's Home (Wai Po Jia) — a famous local chain serving Dongpo pork, West Lake vinegar fish, and beggar's chicken at very reasonable prices. Or explore the smaller family restaurants on the side streets.</td>
+            <td class="note">West Lake vinegar fish is the signature Hangzhou dish and quite unlike anything you've eaten on the trip — sweet, sour, and delicate river carp. Dongpo pork (slow-braised pork belly in soy and Shaoxing wine) is the other essential order. Both are typically only 40–60 RMB per dish.</td>
+          </tr>
+          <tr>
+            <td>1:30 – 3:30 pm</td>
+            <td>
+              <div class="stop-name">Private boat — Three Pools Mirroring Moon</div>
+              <div><span class="badge badge-view">Scenic</span></div>
+            </td>
+            <td class="note">Hire a private wooden rowboat from the dock near the Su Causeway southern end — around 150 RMB for 40 minutes. Head to the Three Pools Mirroring Moon island (Xiaoying Zhou) in the southern lake — an island within a lake, with zigzag bridges, lotus ponds, and pavilions. One of the ten classic West Lake views and accessible only by boat.</td>
+            <td class="note">Always hire a private boat rather than the group ferry — the private boats access quieter parts of the lake and you set your own pace. Negotiate the price before getting in. The boatmen often speak basic English. Bring sunscreen — the lake is exposed and the reflection doubles the UV intensity.</td>
+          </tr>
+          <tr>
+            <td>3:30 – 5:00 pm</td>
+            <td>
+              <div class="stop-name">Leifeng Pagoda</div>
+              <div><span class="badge badge-hist">Historical</span></div>
+              <div class="why">A reconstructed Tang-dynasty pagoda on the southern shore of West Lake, first built in 977 AD and collapsed in 1924. The modern glass and bronze reconstruction sits over the original ancient foundations — visible underground through a glass floor. One of the ten classic West Lake views and the most photographed reflection on the lake, especially at golden hour.</div>
+            </td>
+            <td class="note">Arrive around 4pm for the best light — the pagoda catches the late afternoon sun beautifully and its reflection in the southern lake is the iconic Hangzhou image. Take the glass lift to the top floor for 360-degree views across the lake, city, and surrounding Qianshan hills. The underground foundations level is fascinating — original Tang and Song dynasty stonework preserved in situ.</td>
+            <td class="note">Entry is around 40 RMB. Allow 45–60 minutes. The lakeside path connecting Leifeng south to the Impression show venue is a lovely 20-minute evening walk as the light fades — a natural transition into the night.</td>
+          </tr>
+          <tr>
+            <td>5:00 – 6:30 pm</td>
+            <td>
+              <div class="stop-name">Dinner — Hefang Street</div>
+              <div><span class="badge badge-food">Food</span></div>
+            </td>
+            <td class="note">Walk or Didi to Hefang Street — Hangzhou's restored Song-dynasty historic quarter — for an early dinner before the show. The street is lined with traditional wooden shopfronts, century-old tea houses, and local street food. Try the fried lotus root cakes, osmanthus rice cake, and local baijiu (white spirit) at the stalls, then sit down for a proper meal at one of the canalside restaurants.</td>
+            <td class="note">Eat early — the Impression show runs from around 7:45pm and the venue is on the northern shore of West Lake, about 20 minutes by Didi from Hefang Street. Don't eat too late or too heavily — the show lasts 40 minutes and involves outdoor seating.</td>
+          </tr>
+          <tr>
+            <td colspan="4" class="section-divider">Evening — Impression West Lake</td>
+          </tr>
+          <tr>
+            <td>7:15 – 9:00 pm</td>
+            <td>
+              <div class="stop-name">Impression West Lake show</div>
+              <div><span class="badge badge-cult">Culture</span><span class="badge badge-night" style="margin-left:4px">Nightlife</span></div>
+              <div class="why">Zhang Yimou's landmark outdoor theatrical production staged on the surface of West Lake itself — one of the great spectacles of modern China. Running since 2004, the show uses the lake as its stage with traditional dancers, boats as props, elaborate lighting installations, and the pagoda and mountains as a natural backdrop. A cast of hundreds performs across the water as Hangzhou's most famous legend — the White Snake — is brought to life.</div>
+            </td>
+            <td class="note">Arrive 30 minutes early for the best seat selection. The show runs approximately 40 minutes with no interval. Sit in the middle tier for the best sightlines across the full lake stage — the upper tier has the widest view, the lower tier is the most immersive. The show is entirely outdoor — dress warmly in cooler months.</td>
+            <td class="note">Book tickets well in advance — this sells out on weekends. Available via Trip.com or the official Impression West Lake website. Tickets range from 180–680 RMB depending on section. After the show, walk back along the northern lakeshore — the pagoda lit gold across the dark water is a beautiful final image of the evening.</td>
+          </tr>
+          <tr>
+            <td>9:00 pm onwards</td>
+            <td>
+              <div class="stop-name">Lakeside evening stroll</div>
+              <div><span class="badge badge-walk">Walking</span></div>
+            </td>
+            <td class="note">Walk back along the northern Beishan Road lakeshore after the show — the Leifeng Pagoda glows gold across the dark water, willows trail in the lake, and the city has wound down to a gentle hum. A perfect, quiet end to the first Hangzhou evening. Early night recommended — tomorrow starts at dawn on the lake.</td>
+            <td class="note">Set an alarm for 5:30am. The dawn boat experience on Day 10 is the single most memorable moment of the entire Hangzhou stay — being well-rested for it is worth an early night tonight.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </body>
 </html>

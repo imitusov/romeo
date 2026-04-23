@@ -1,13 +1,214 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Day 10 - Coming Soon</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 10 — Hangzhou</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f5f5f3;
+      display: flex;
+      justify-content: center;
+      padding: 2rem 1rem;
+      margin: 0;
+      color: #1a1a19;
+    }
+    .wrapper { max-width: 820px; width: 100%; }
+    h1 { font-size: 22px; font-weight: 500; margin: 0 0 4px; color: #1a1a19; }
+    .subtitle { font-size: 13px; color: #5f5e5a; margin-bottom: 1.5rem; }
+    * { box-sizing: border-box; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    thead th {
+      font-size: 12px; font-weight: 500; color: #5f5e5a;
+      text-align: left; padding: 8px 14px;
+      border-bottom: 0.5px solid #b4b2a9;
+      background: #f1efe8;
+    }
+    tbody tr { border-bottom: 0.5px solid #d3d1c7; }
+    tbody tr:last-child { border-bottom: none; }
+    td { padding: 12px 14px; vertical-align: top; line-height: 1.5; color: #1a1a19; }
+    td:first-child { white-space: nowrap; font-size: 13px; color: #5f5e5a; width: 120px; }
+    td:nth-child(2) { width: 170px; }
+    .stop-name { font-weight: 500; font-size: 14px; color: #1a1a19; }
+    .badge {
+      display: inline-block; font-size: 11px; font-weight: 500;
+      padding: 2px 8px; border-radius: 6px; margin-top: 4px;
+    }
+    .badge-hist  { background: #EEEDFE; color: #3C3489; }
+    .badge-food  { background: #FAECE7; color: #993C1D; }
+    .badge-view  { background: #E1F5EE; color: #085041; }
+    .badge-walk  { background: #EAF3DE; color: #27500A; }
+    .badge-trans { background: #E6F1FB; color: #0C447C; }
+    .badge-cult  { background: #FBEAF0; color: #72243E; }
+    .badge-nature { background: #C0DD97; color: #27500A; }
+    .note { font-size: 13px; color: #444441; }
+    .why { font-size: 11px; color: #854F0B; background: #FAEEDA; border-radius: 5px; padding: 4px 8px; margin-top: 6px; line-height: 1.5; }
+    .card {
+      background: #ffffff;
+      border: 0.5px solid #d3d1c7;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .card-header {
+      padding: 14px 16px;
+      background: #f1efe8;
+      border-bottom: 0.5px solid #b4b2a9;
+    }
+    .card-header-title { font-size: 16px; font-weight: 500; color: #1a1a19; }
+    .card-header-sub { font-size: 12px; color: #5f5e5a; margin-top: 2px; }
+    .legend {
+      display: flex; gap: 16px; flex-wrap: wrap;
+      margin-bottom: 1rem; font-size: 12px; color: #5f5e5a;
+      align-items: center;
+    }
+    .legend-item { display: flex; align-items: center; gap: 5px; }
+    .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .section-divider {
+      font-size: 11px; font-weight: 500; color: #5f5e5a;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      background: #f7f6f2; padding: 6px 14px;
+      border-top: 0.5px solid #d3d1c7;
+      border-bottom: 0.5px solid #d3d1c7;
+    }
+    .farewell-note {
+      background: #E1F5EE; border-left: 3px solid #1D9E75;
+      padding: 10px 14px; font-size: 12px; color: #085041;
+      line-height: 1.6; margin-top: 10px; border-radius: 0 5px 5px 0;
+    }
+  </style>
 </head>
 <body>
-  <h1>Day 10</h1>
-  <p>Coming soon.</p>
-  <a href="../index.html">Back to home</a>
+  <div class="wrapper">
+    <h1>Day 10 — Hangzhou</h1>
+    <p class="subtitle">Dawn boat on West Lake · Longjing Tea Village · Lingyin Temple & Feilai Feng · Return to Shanghai</p>
+
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#1D9E75"></div> Scenic</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#97C459"></div> Nature</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#7F77DD"></div> Historical</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#D4537E"></div> Culture</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#D85A30"></div> Food</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#378ADD"></div> Transit</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-header-title">Full day itinerary</div>
+        <div class="card-header-sub">Dawn mist on the lake, tea hills in the morning, ancient forest temple in the afternoon, train home</div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Stop</th>
+            <th>What to do</th>
+            <th>Tips</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="4" class="section-divider">Dawn — West Lake by boat</td>
+          </tr>
+          <tr>
+            <td>5:30 – 6:00 am</td>
+            <td>
+              <div class="stop-name">Pre-dawn departure</div>
+              <div><span class="badge badge-view">Scenic</span></div>
+            </td>
+            <td class="note">Wake before first light and walk or take a short Didi to the lake dock — arrange your boatman the evening before for a 6am pickup. The lake is completely still at this hour. Bring a warm layer — the water is cold and misty before sunrise, even in summer.</td>
+            <td class="note">Arrange the dawn boat with your hotel concierge on Day 9 evening. The boatmen at the dock near Su Causeway will agree a 6am start for around 150–200 RMB. This is the single experience on the entire trip most worth waking up early for.</td>
+          </tr>
+          <tr>
+            <td>6:00 – 7:30 am</td>
+            <td>
+              <div class="stop-name">Dawn boat on West Lake</div>
+              <div><span class="badge badge-view">Scenic</span><span class="badge badge-nature" style="margin-left:4px">Nature</span></div>
+              <div class="why">At dawn, before the city wakes, West Lake sits under a layer of mist with the Leifeng Pagoda emerging from the haze and the Qianshan hills reflected in the perfectly still water. Chinese poets have been writing about this precise moment for over a thousand years — Su Dongpo, Bai Juyi, and countless others described it as one of the most beautiful sights in China. It lives up to every word.</div>
+            </td>
+            <td class="note">Drift slowly across the southern lake toward the Three Pools Mirroring Moon — the stone lanterns emerging from the mist are extraordinary. Watch the pagoda catch the first light. Listen to the silence broken only by water and birdsong. Don't photograph for the first 10 minutes — just sit in it.</td>
+            <td class="note">Bring nothing except a warm jacket and your phone for photos later. The mist usually lifts by 7:30am — the window is short and completely unrepeatable. If the weather is clear rather than misty, the golden early light is equally beautiful in a different way. Either way, you will not regret it.</td>
+          </tr>
+          <tr>
+            <td>7:30 – 8:30 am</td>
+            <td>
+              <div class="stop-name">Breakfast by the lake</div>
+              <div><span class="badge badge-food">Food</span></div>
+            </td>
+            <td class="note">Return to the shore and find a lakeside cafe for breakfast — congee, fresh soy milk, and steamed buns. The small local breakfast places on Nanshan Road opening from 7am are excellent. Take your time — let the morning settle around you before heading to the tea hills.</td>
+            <td class="note">This breakfast is one of the great travel moments — sitting by the lake as the mist lifts and the city slowly wakes around you, looking back at what you just experienced. Don't rush it.</td>
+          </tr>
+          <tr>
+            <td colspan="4" class="section-divider">Morning — Longjing Tea Village</td>
+          </tr>
+          <tr>
+            <td>9:00 – 11:30 am</td>
+            <td>
+              <div class="stop-name">Meijiawu tea village & plantations</div>
+              <div><span class="badge badge-nature">Nature</span><span class="badge badge-cult" style="margin-left:4px">Culture</span></div>
+              <div class="why">The hillside villages above West Lake have grown China's most celebrated green tea — Dragon Well (Longjing) — for over 1,200 years. Meijiawu village is the most authentic of the Longjing villages, set in a narrow valley with terraced tea plantations climbing both hillsides. You can walk through the rows, watch the traditional hand-frying process in farmhouse kitchens, and taste fresh tea directly from the family who grew it.</div>
+            </td>
+            <td class="note">Take a Didi to Meijiawu village — about 20 minutes from the lake. Walk into the village past the entrance stalls and find a family tea house deeper inside — the ones away from the road have better prices and more authentic setups. Ask to see the hand-frying process — families will usually demonstrate for interested visitors. The plantation walk takes 30–40 minutes at a gentle pace through the terraced rows.</td>
+            <td class="note">Avoid the tourist tea shops at the village entrance — prices are marked up heavily. Walk 5 minutes further into the village for genuine farm prices. A good 50g bag of fresh Longjing should cost 80–150 RMB depending on grade — not 500 RMB as the entrance stalls charge. Spring harvest tea (picked March–May) is the most prized but autumn tea is still excellent.</td>
+          </tr>
+          <tr>
+            <td>11:30 am – 12:30 pm</td>
+            <td>
+              <div class="stop-name">Lunch in the hills</div>
+              <div><span class="badge badge-food">Food</span></div>
+            </td>
+            <td class="note">Eat lunch at one of the farmhouse restaurants in Meijiawu village before heading to Lingyin — many tea farmers run simple restaurants serving Hangzhou countryside cooking. Order longjing shrimp (prawns stir-fried with fresh tea leaves — a Hangzhou speciality), bamboo shoot soup, and wild mountain vegetables. Simple, seasonal, and extraordinary.</td>
+            <td class="note">Longjing shrimp is one of the signature dishes of Hangzhou cuisine and genuinely only tastes this good in season and in this region. If you've been eating it elsewhere on the trip, this version will be the best. Don't leave Meijiawu without trying it.</td>
+          </tr>
+          <tr>
+            <td colspan="4" class="section-divider">Afternoon — Lingyin Temple & Feilai Feng</td>
+          </tr>
+          <tr>
+            <td>1:30 – 4:30 pm</td>
+            <td>
+              <div class="stop-name">Lingyin Temple & Feilai Feng</div>
+              <div><span class="badge badge-hist">Historical</span><span class="badge badge-cult" style="margin-left:4px">Culture</span></div>
+              <div class="why">One of China's largest and wealthiest Chan (Zen) Buddhist temples, founded in 328 AD and set in a forested valley west of West Lake. The adjacent Feilai Feng limestone cliff is covered in over 300 Buddhist stone carvings dating from the 10th to 14th centuries — carved directly into the rock face alongside caves and grottoes. It is one of the most spiritually atmospheric places on the entire trip — incense smoke, chanting monks, ancient forest, carved rock faces.</div>
+            </td>
+            <td class="note">Visit Feilai Feng first — the limestone carvings are best in afternoon light and the grottoes are extraordinary. The laughing Buddha carved in the rock at the entrance is one of the most famous Buddhist images in China. Then enter the temple complex — the Great Hall contains a 19.6m gilded camphorwood Buddha, the largest indoor wooden statue in China. Walk to the upper temple halls behind the main complex for the most peaceful and least crowded experience.</td>
+            <td class="note">Entry requires advance reservation via the official WeChat account — the daily visitor number is capped. Book on Day 9 evening at the latest. Allow 2.5–3 hours for both Feilai Feng and the temple. The forest path connecting the two is beautiful — cool, shaded, and full of birdsong. A serene and powerful final historical experience before leaving China.</td>
+          </tr>
+          <tr>
+            <td>4:30 – 5:30 pm</td>
+            <td>
+              <div class="stop-name">Final West Lake walk & farewell</div>
+              <div><span class="badge badge-walk">Walking</span><span class="badge badge-view" style="margin-left:4px">Scenic</span></div>
+            </td>
+            <td class="note">Return to West Lake for one last slow walk along the southern lakeshore path. Watch the Leifeng Pagoda catch the late afternoon light one final time. Sit by the water if you have time. Take a moment — this is the last stop of a remarkable trip across China.</td>
+            <td class="note">The walk from Lingyin back to the lake via taxi takes about 15 minutes. The southern lakeshore path between Leifeng and the Su Causeway is the most beautiful stretch for a final walk — flat, tree-lined, and peaceful.</td>
+          </tr>
+          <tr>
+            <td colspan="4" class="section-divider">Evening — Return to Shanghai</td>
+          </tr>
+          <tr>
+            <td>6:00 – 7:00 pm</td>
+            <td>
+              <div class="stop-name">Farewell dinner — Hangzhou</div>
+              <div><span class="badge badge-food">Food</span></div>
+            </td>
+            <td class="note">A final Hangzhou dinner before the train — return to Nanshan Road or Hefang Street for one last meal. Order anything you haven't yet tried: beggar's chicken (whole chicken baked in clay — order 24 hours ahead), sweet osmanthus rice cake, or a simple bowl of West Lake fish soup. A quiet, satisfying farewell to Chinese food at its most refined.</td>
+            <td class="note">Keep dinner relaxed and early — you need to catch the train back to Shanghai Hongqiao. The last trains to Shanghai run around 9–10pm, giving a comfortable 2-hour window after a 7pm dinner.</td>
+          </tr>
+          <tr>
+            <td>8:00 – 9:00 pm</td>
+            <td>
+              <div class="stop-name">Bullet train to Shanghai</div>
+              <div><span class="badge badge-trans">Transit</span></div>
+            </td>
+            <td class="note">Take a Didi to Hangzhou East Station and catch the G-train back to Shanghai Hongqiao — 45 minutes. From Hongqiao, taxi or metro to your airport hotel or directly to Pudong/Hongqiao airport if flying the next morning.</td>
+            <td class="note">Book the return train in advance. If flying home from Shanghai on Day 11, stay near the airport or in a central hotel with easy access to both Pudong and Hongqiao. Confirm your flight departure airport — they are on opposite sides of the city and are 1–1.5 hours apart.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="padding: 14px 16px; background: #f1efe8; border-top: 0.5px solid #b4b2a9;">
+        <div class="farewell-note">You started this trip at the Tiananmen Square flag ceremony in Beijing 10 days ago. You've crossed 2,000 km through three of China's great cities and one of its most beautiful lake towns. The dawn boat this morning — mist on West Lake, the pagoda emerging from the haze, complete silence — is the image to carry home. Have a wonderful flight.</div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
