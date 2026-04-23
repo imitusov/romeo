@@ -1,13 +1,211 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Day 7 - Coming Soon</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shanghai Day 7 Schedule</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f5f5f3;
+      display: flex;
+      justify-content: center;
+      padding: 2rem 1rem;
+      margin: 0;
+      color: #1a1a19;
+    }
+    .wrapper { max-width: 820px; width: 100%; }
+    h1 { font-size: 22px; font-weight: 500; margin: 0 0 4px; color: #1a1a19; }
+    .subtitle { font-size: 13px; color: #5f5e5a; margin-bottom: 1.5rem; }
+    * { box-sizing: border-box; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    thead th {
+      font-size: 12px; font-weight: 500; color: #5f5e5a;
+      text-align: left; padding: 8px 14px;
+      border-bottom: 0.5px solid #b4b2a9;
+      background: #f1efe8;
+    }
+    tbody tr { border-bottom: 0.5px solid #d3d1c7; }
+    tbody tr:last-child { border-bottom: none; }
+    td { padding: 12px 14px; vertical-align: top; line-height: 1.5; color: #1a1a19; }
+    td:first-child { white-space: nowrap; font-size: 13px; color: #5f5e5a; width: 120px; }
+    td:nth-child(2) { width: 170px; }
+    .stop-name { font-weight: 500; font-size: 14px; color: #1a1a19; }
+    .badge {
+      display: inline-block; font-size: 11px; font-weight: 500;
+      padding: 2px 8px; border-radius: 6px; margin-top: 4px;
+    }
+    .badge-hist  { background: #EEEDFE; color: #3C3489; }
+    .badge-food  { background: #FAECE7; color: #993C1D; }
+    .badge-view  { background: #E1F5EE; color: #085041; }
+    .badge-mod   { background: #E6F1FB; color: #0C447C; }
+    .badge-night { background: #FBEAF0; color: #72243E; }
+    .badge-walk  { background: #EAF3DE; color: #27500A; }
+    .note { font-size: 13px; color: #444441; }
+    .why { font-size: 11px; color: #854F0B; background: #FAEEDA; border-radius: 5px; padding: 4px 8px; margin-top: 6px; line-height: 1.5; }
+    .warn { font-size: 11px; color: #A32D2D; background: #FCEBEB; border-radius: 5px; padding: 4px 8px; margin-top: 6px; line-height: 1.5; }
+    .card {
+      background: #ffffff;
+      border: 0.5px solid #d3d1c7;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .card-header {
+      padding: 14px 16px;
+      background: #f1efe8;
+      border-bottom: 0.5px solid #b4b2a9;
+    }
+    .card-header-title { font-size: 16px; font-weight: 500; color: #1a1a19; }
+    .card-header-sub { font-size: 12px; color: #5f5e5a; margin-top: 2px; }
+    .legend {
+      display: flex; gap: 16px; flex-wrap: wrap;
+      margin-bottom: 1rem; font-size: 12px; color: #5f5e5a;
+      align-items: center;
+    }
+    .legend-item { display: flex; align-items: center; gap: 5px; }
+    .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .section-divider {
+      font-size: 11px; font-weight: 500; color: #5f5e5a;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      background: #f7f6f2; padding: 6px 14px;
+      border-top: 0.5px solid #d3d1c7;
+      border-bottom: 0.5px solid #d3d1c7;
+    }
+  </style>
 </head>
 <body>
-  <h1>Day 7</h1>
-  <p>Coming soon.</p>
-  <a href="../index.html">Back to home</a>
+  <div class="wrapper">
+    <h1>Day 7 — Shanghai</h1>
+    <p class="subtitle">The Bund · Yu Garden · French Concession · Pudong skyline</p>
+
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#7F77DD"></div> Historical</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#639922"></div> Walking</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#1D9E75"></div> Scenic</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#378ADD"></div> Modern</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#D85A30"></div> Food</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#D4537E"></div> Nightlife</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-header-title">Full day itinerary</div>
+        <div class="card-header-sub">The Bund at dawn, Old Shanghai mid-morning, French Concession afternoon, Pudong at sunset</div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Stop</th>
+            <th>What to do</th>
+            <th>Tips</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="4" class="section-divider">Morning — The Bund & Old Shanghai</td>
+          </tr>
+          <tr>
+            <td>7:30 – 9:00 am</td>
+            <td>
+              <div class="stop-name">The Bund</div>
+              <div><span class="badge badge-hist">Historical</span><span class="badge badge-walk" style="margin-left:4px">Walking</span></div>
+              <div class="why">A 1.5 km promenade of 52 colonial-era buildings facing the futuristic Pudong skyline across the Huangpu River — Shanghai's defining image and the sharpest visual contrast in any city in the world. Best in soft morning light before the crowds arrive.</div>
+            </td>
+            <td class="note">Walk the full length south to north. Stop at the Bund Bull statue, the former HSBC building, and the Customs House clock tower. Cross to the Pudong side via the pedestrian tunnel for the best reverse angle on the colonial façades.</td>
+            <td class="note">7:30am is the sweet spot — local tai chi practitioners still on the promenade, almost no tourists, golden morning light. By 10am it becomes much busier. The Pudong skyline looks different from every angle — take your time.</td>
+          </tr>
+          <tr>
+            <td>9:00 – 9:30 am</td>
+            <td>
+              <div class="stop-name">Breakfast — Nanjing Road East</div>
+              <div><span class="badge badge-food">Food</span></div>
+            </td>
+            <td class="note">Head west along Nanjing Road East for a classic Shanghai breakfast — sheng jian bao (pan-fried pork buns), doujiang (warm soy milk), and scallion pancakes from street stalls or the local chain Da Hu Chun. Simple, cheap, and delicious.</td>
+            <td class="note">Nanjing Road itself is worth a quick look in the morning light when it's relatively empty — the grand early 20th-century shopfront buildings are far more visible without the evening crowds.</td>
+          </tr>
+          <tr>
+            <td>9:30 – 11:00 am</td>
+            <td>
+              <div class="stop-name">Yu Garden</div>
+              <div><span class="badge badge-hist">Historical</span></div>
+              <div class="why">A classical Ming-dynasty garden built in 1559 — rockeries, koi ponds, dragon walls, and ornate pavilions — the only major historical garden surviving in central Shanghai. A stunning contrast with the surrounding skyscraper city. Closed on Mondays.</div>
+            </td>
+            <td class="note">Enter via the south gate on Anren Street. Follow the maze of corridors and courtyards rather than the obvious path — the best views are off the main route. The Grand Rockery in the central section dates to the Ming dynasty and is exceptional.</td>
+            <td class="note">Book tickets online — 40 RMB, and avoids the entrance queue. Arrive by 9:30am. The garden closes at 4:30pm but crowds peak after 11am. Skip the Huxinting Teahouse on the zigzag bridge — very poor value for tourists. Find tea elsewhere.</td>
+          </tr>
+          <tr>
+            <td>11:00 am – 12:30 pm</td>
+            <td>
+              <div class="stop-name">Nanxiang Xiaolongbao lunch</div>
+              <div><span class="badge badge-food">Food</span></div>
+            </td>
+            <td class="note">Walk 2 minutes to Nanxiang Steamed Bun Restaurant at the Yu Garden bazaar — one of the oldest xiaolongbao (soup dumpling) institutions in Shanghai, founded in 1900. Order the pork and crab version. Eat at the restaurant rather than the takeaway window for the full experience.</td>
+            <td class="note">Arrive just before 11am to beat the main lunch rush. Technique: bite a small hole in the side, sip the broth slowly, then eat. Never bite straight through — the soup is boiling. Allow plenty of time — this is a meal to savour.</td>
+          </tr>
+          <tr>
+            <td colspan="4" class="section-divider">Afternoon — French Concession</td>
+          </tr>
+          <tr>
+            <td>1:00 – 2:30 pm</td>
+            <td>
+              <div class="stop-name">Xintiandi</div>
+              <div><span class="badge badge-mod">Modern</span><span class="badge badge-hist" style="margin-left:4px">Historical</span></div>
+            </td>
+            <td class="note">Take a Didi 15 minutes southwest into the French Concession. Xintiandi is a beautifully restored shikumen (stone-gate) lane house precinct — galleries, design shops, and excellent cafes in preserved 1920s architecture. Grab an afternoon coffee at one of the terrace cafes and watch Shanghai life flow past.</td>
+            <td class="note">The Xintiandi Style mall on the south block has a good rooftop terrace cafe. The Shikumen Open House Museum inside the complex is a small but worthwhile stop — a perfectly preserved 1920s lane house interior for just 20 RMB.</td>
+          </tr>
+          <tr>
+            <td>2:30 – 4:00 pm</td>
+            <td>
+              <div class="stop-name">Tianzifang</div>
+              <div><span class="badge badge-walk">Walking</span><span class="badge badge-mod" style="margin-left:4px">Modern</span></div>
+            </td>
+            <td class="note">Walk 15 minutes south to Tianzifang — a labyrinth of narrow alleyways inside preserved shikumen blocks, packed with independent galleries, craft studios, and small cafes. More intimate and artisanal than Xintiandi. Get deliberately lost in the back alleys off Taikang Road.</td>
+            <td class="note">The main entrance on Taikang Road is the most touristy — enter instead via the side lanes off Sinan Road or Ruijin Er Road for a quieter experience. The upper floors of some buildings house working artists — doors are often open.</td>
+          </tr>
+          <tr>
+            <td>4:00 – 5:30 pm</td>
+            <td>
+              <div class="stop-name">Wukang Road stroll</div>
+              <div><span class="badge badge-walk">Walking</span><span class="badge badge-view" style="margin-left:4px">Scenic</span></div>
+            </td>
+            <td class="note">Walk northwest through the French Concession along Wukang Road — arguably the most beautiful street in Shanghai. Lined with plane trees, French villas, and Art Deco apartment buildings, it culminates at the iconic Wukang Mansion (a 1924 Baroque-style building at the junction). A perfect late afternoon drift.</td>
+            <td class="note">The entire walk from Tianzifang to Wukang Mansion is only 25 minutes — but allow more because you'll stop constantly. Anfu Road and Fuxing Road branching off Wukang are equally beautiful. This area has the best independent cafes in Shanghai for a mid-afternoon break.</td>
+          </tr>
+          <tr>
+            <td colspan="4" class="section-divider">Evening — Dinner & Pudong skyline</td>
+          </tr>
+          <tr>
+            <td>6:00 – 7:30 pm</td>
+            <td>
+              <div class="stop-name">Dinner — Lost Heaven</div>
+              <div><span class="badge badge-food">Food</span></div>
+            </td>
+            <td class="note">Take a Didi back towards the Bund for dinner at Lost Heaven on Yan'an Dong Lu — one of Shanghai's most atmospheric restaurants, serving Yunnan cuisine (southwest China — mushrooms, herbs, fresh vegetables, aromatic broths). The interior is beautifully designed and the food genuinely exceptional. Book a table in advance.</td>
+            <td class="note">Order: the Yunnan truffle fried rice, the grilled aubergine with cumin, and the Dai-style salad. Lost Heaven represents a completely different regional cuisine from anything you've had in Beijing or Xi'an — it's the ideal introduction to how vast and varied Chinese cooking actually is.</td>
+          </tr>
+          <tr>
+            <td>7:30 – 9:00 pm</td>
+            <td>
+              <div class="stop-name">Shanghai Tower — sunset observation</div>
+              <div><span class="badge badge-mod">Modern</span><span class="badge badge-view" style="margin-left:4px">Scenic</span></div>
+            </td>
+            <td class="note">Cross to Pudong via taxi or metro for the Shanghai Tower observation deck on the 118th floor — 632m up, the world's fastest elevator (under 60 seconds to the top). Arrive at 7:30pm to catch the last of the sunset light, then watch the city light up beneath you as darkness falls. A genuinely vertiginous and spectacular experience.</td>
+            <td class="note">Book tickets online in advance (around 180 RMB). The deck is open until 9:30pm. The cafe on floor 119 serves drinks with the view — expensive but worth it for one glass while the city lights come on. The glass floor section is near the elevator — not for the seriously faint-hearted.</td>
+          </tr>
+          <tr>
+            <td>9:00 – 10:00 pm</td>
+            <td>
+              <div class="stop-name">Bund by night — final walk</div>
+              <div><span class="badge badge-walk">Walking</span><span class="badge badge-night" style="margin-left:4px">Nightlife</span></div>
+            </td>
+            <td class="note">Return to the Bund for a final evening stroll — now fully illuminated on both sides of the river. The colonial buildings are lit gold, the Pudong towers are lit in colour, and the Huangpu River reflects everything below. The single most iconic night scene in Shanghai.</td>
+            <td class="note">After 9pm the crowds thin slightly. Walk from the north end of the Bund (near the Waibaidu Bridge) south towards Yan'an Road for the best unobstructed promenade views. End the night at Bar Rouge or Vue Bar above the Hyatt on the Bund for a nightcap with panoramic river views.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </body>
 </html>
