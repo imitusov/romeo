@@ -1,13 +1,200 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Day 11 - Coming Soon</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>China — Travel Between Cities</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f5f5f3;
+      display: flex;
+      justify-content: center;
+      padding: 2rem 1rem;
+      margin: 0;
+      color: #1a1a19;
+    }
+    .wrapper { max-width: 820px; width: 100%; }
+    h1 { font-size: 22px; font-weight: 500; margin: 0 0 4px; color: #1a1a19; }
+    .subtitle { font-size: 13px; color: #5f5e5a; margin-bottom: 1.5rem; }
+    * { box-sizing: border-box; }
+    .route-card {
+      background: #ffffff;
+      border: 0.5px solid #d3d1c7;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .route-header {
+      display: flex; align-items: center; gap: 14px;
+      padding: 12px 16px;
+      background: #f1efe8;
+      border-bottom: 0.5px solid #d3d1c7;
+    }
+    .route-cities { font-size: 15px; font-weight: 500; color: #1a1a19; flex: 1; }
+    .route-arrow { color: #888780; font-size: 13px; margin: 0 4px; }
+    .route-day { font-size: 11px; font-weight: 500; background: #EEEDFE; color: #3C3489; padding: 2px 8px; border-radius: 5px; white-space: nowrap; }
+    .options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+    .option { padding: 12px 16px; border-right: 0.5px solid #d3d1c7; }
+    .option:last-child { border-right: none; }
+    .option-label { font-size: 10px; font-weight: 500; color: #888780; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+    .option-name { font-size: 13px; font-weight: 500; color: #1a1a19; margin-bottom: 4px; }
+    .option-meta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+    .meta-pill { font-size: 11px; color: #5f5e5a; }
+    .rec-badge { display: inline-block; font-size: 10px; font-weight: 500; padding: 1px 7px; border-radius: 4px; margin-top: 5px; background: #E1F5EE; color: #085041; }
+    .note-row { padding: 8px 16px 10px; font-size: 12px; color: #5f5e5a; border-top: 0.5px solid #d3d1c7; background: #f7f6f2; line-height: 1.5; }
+    .summary-box { background: #f1efe8; border: 0.5px solid #d3d1c7; border-radius: 12px; padding: 14px 16px; margin-bottom: 16px; }
+    .summary-title { font-size: 12px; font-weight: 500; color: #5f5e5a; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
+    .summary-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .stat { background: #ffffff; border-radius: 8px; padding: 10px 12px; border: 0.5px solid #d3d1c7; }
+    .stat-val { font-size: 18px; font-weight: 500; color: #1a1a19; }
+    .stat-lbl { font-size: 11px; color: #5f5e5a; margin-top: 2px; }
+    .tips-box { background: #f1efe8; border: 0.5px solid #d3d1c7; border-radius: 12px; padding: 14px 16px; margin-top: 16px; }
+    .tips-title { font-size: 12px; font-weight: 500; color: #5f5e5a; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
+    .tip-row { font-size: 12px; color: #444441; line-height: 1.7; padding: 4px 0; border-bottom: 0.5px solid #d3d1c7; }
+    .tip-row:last-child { border-bottom: none; }
+    .tip-row strong { color: #1a1a19; font-weight: 500; }
+  </style>
 </head>
 <body>
-  <h1>Day 11</h1>
-  <p>Coming soon.</p>
-  <a href="../index.html">Back to home</a>
+  <div class="wrapper">
+    <h1>China — Travel between cities</h1>
+    <p class="subtitle">Beijing · Xi'an · Shanghai · Hangzhou — all intercity journeys</p>
+
+    <div class="summary-box">
+      <div class="summary-title">Trip totals — recommended options</div>
+      <div class="summary-grid">
+        <div class="stat"><div class="stat-val">4</div><div class="stat-lbl">Intercity journeys</div></div>
+        <div class="stat"><div class="stat-val">~€115–145</div><div class="stat-lbl">Total travel cost (2 people)</div></div>
+        <div class="stat"><div class="stat-val">~12 hrs</div><div class="stat-lbl">Total travel time</div></div>
+      </div>
+    </div>
+
+    <div class="route-card">
+      <div class="route-header">
+        <div class="route-cities">Beijing <span class="route-arrow">→</span> Xi'an</div>
+        <div class="route-day">Day 4</div>
+      </div>
+      <div class="options-grid">
+        <div class="option">
+          <div class="option-label">Recommended</div>
+          <div class="option-name">G-train (High-speed rail)</div>
+          <div class="option-meta">
+            <div class="meta-pill">⏱ 4.5 hrs</div>
+            <div class="meta-pill">💶 ~€30–40 per person</div>
+            <div class="meta-pill">🚉 Beijing West → Xi'an North</div>
+          </div>
+          <div class="rec-badge">Best option</div>
+        </div>
+        <div class="option">
+          <div class="option-label">Alternative</div>
+          <div class="option-name">Flight</div>
+          <div class="option-meta">
+            <div class="meta-pill">⏱ ~2 hrs + airport time</div>
+            <div class="meta-pill">💶 ~€50–90 per person</div>
+            <div class="meta-pill">✈ Beijing Capital/Daxing → Xi'an Xianyang</div>
+          </div>
+        </div>
+      </div>
+      <div class="note-row">Train is strongly preferred — comfortable, scenic through the Taihang Mountains, departs city-centre to city-centre with no airport hassle. Book on 12306 or Trip.com.</div>
+    </div>
+
+    <div class="route-card">
+      <div class="route-header">
+        <div class="route-cities">Xi'an <span class="route-arrow">→</span> Shanghai</div>
+        <div class="route-day">Day 6</div>
+      </div>
+      <div class="options-grid">
+        <div class="option">
+          <div class="option-label">Recommended</div>
+          <div class="option-name">G-train (High-speed rail)</div>
+          <div class="option-meta">
+            <div class="meta-pill">⏱ ~6 hrs</div>
+            <div class="meta-pill">💶 ~€50–65 per person</div>
+            <div class="meta-pill">🚉 Xi'an North → Shanghai Hongqiao</div>
+          </div>
+          <div class="rec-badge">Best option</div>
+        </div>
+        <div class="option">
+          <div class="option-label">Alternative</div>
+          <div class="option-name">Flight</div>
+          <div class="option-meta">
+            <div class="meta-pill">⏱ ~2 hrs + airport time</div>
+            <div class="meta-pill">💶 ~€60–110 per person</div>
+            <div class="meta-pill">✈ Xi'an Xianyang → Shanghai Pudong/Hongqiao</div>
+          </div>
+        </div>
+      </div>
+      <div class="note-row">A 6-hour evening train is very comfortable in second class — dining car, reclining seats, beautiful scenery through the Qinling Mountains. Arrives Shanghai late night on Day 6 ready for Day 7. Flying saves ~4 hrs but adds airport transfers and costs more.</div>
+    </div>
+
+    <div class="route-card">
+      <div class="route-header">
+        <div class="route-cities">Shanghai <span class="route-arrow">→</span> Hangzhou</div>
+        <div class="route-day">Day 9</div>
+      </div>
+      <div class="options-grid">
+        <div class="option">
+          <div class="option-label">Recommended</div>
+          <div class="option-name">G-train (High-speed rail)</div>
+          <div class="option-meta">
+            <div class="meta-pill">⏱ ~45 min</div>
+            <div class="meta-pill">💶 ~€8–12 per person</div>
+            <div class="meta-pill">🚉 Shanghai Hongqiao → Hangzhou East</div>
+          </div>
+          <div class="rec-badge">Best option</div>
+        </div>
+        <div class="option">
+          <div class="option-label">Alternative</div>
+          <div class="option-name">Long-distance bus</div>
+          <div class="option-meta">
+            <div class="meta-pill">⏱ ~2.5–3 hrs</div>
+            <div class="meta-pill">💶 ~€5–8 per person</div>
+            <div class="meta-pill">🚌 Shanghai Nanpu → Hangzhou</div>
+          </div>
+        </div>
+      </div>
+      <div class="note-row">The 45-minute bullet train is one of the great bargains in China — cheap, fast, and runs every 15–20 minutes. No reason to take the bus. Trains depart frequently so booking same-day is fine, though advance booking is still recommended.</div>
+    </div>
+
+    <div class="route-card">
+      <div class="route-header">
+        <div class="route-cities">Hangzhou <span class="route-arrow">→</span> Shanghai</div>
+        <div class="route-day">Day 10 (evening)</div>
+      </div>
+      <div class="options-grid">
+        <div class="option">
+          <div class="option-label">Recommended</div>
+          <div class="option-name">G-train (High-speed rail)</div>
+          <div class="option-meta">
+            <div class="meta-pill">⏱ ~45 min</div>
+            <div class="meta-pill">💶 ~€8–12 per person</div>
+            <div class="meta-pill">🚉 Hangzhou East → Shanghai Hongqiao</div>
+          </div>
+          <div class="rec-badge">Best option</div>
+        </div>
+        <div class="option">
+          <div class="option-label">Alternative</div>
+          <div class="option-name">Taxi / private car</div>
+          <div class="option-meta">
+            <div class="meta-pill">⏱ ~1.5–2 hrs</div>
+            <div class="meta-pill">💶 ~€50–70 total</div>
+            <div class="meta-pill">🚗 Door to door</div>
+          </div>
+        </div>
+      </div>
+      <div class="note-row">Return trip on the same line. Last trains to Shanghai run around 10pm — plenty of flexibility after an evening dinner. Private car is worth considering only if you have heavy luggage and are going directly to Pudong Airport.</div>
+    </div>
+
+    <div class="tips-box">
+      <div class="tips-title">Booking tips</div>
+      <div class="tip-row">📱 <strong>Book via Trip.com</strong> — best English-language interface for Chinese rail tickets. Passport numbers required for all bookings.</div>
+      <div class="tip-row">🪑 <strong>Second class</strong> is recommended on all routes — comfortable reclining seats, perfectly adequate for all journey lengths on this trip.</div>
+      <div class="tip-row">🪟 <strong>Window seats</strong> — on Chinese trains, A and F are window seats on opposite sides. Book A+F in the same row to both have windows.</div>
+      <div class="tip-row">⏰ <strong>Arrive early</strong> — Chinese high-speed rail stations are large. Allow 45 min before departure for security and platform finding.</div>
+      <div class="tip-row">🛂 <strong>Passport required</strong> — bring physical passports for ticket collection and station security on every journey.</div>
+    </div>
+
+  </div>
 </body>
 </html>
